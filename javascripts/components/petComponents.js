@@ -3,13 +3,13 @@ import {detailsBuilder} from "./details.js";
 
 let pets = [];
 
-// const setPets = (newArray) => {
-//     pets = newArray;
-//   };
+const setPets = (newArray) => {
+    pets = newArray;
+  };
   
-//   const getPetz = () => {
-//     return pets;
-//   };
+  const getPetz = () => {
+    return pets;
+  };
 
   const petsBuilder = (petsArray) => {
     let domString = '';
