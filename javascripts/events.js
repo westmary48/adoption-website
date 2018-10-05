@@ -19,8 +19,8 @@ const petClick = (e) => {
         if(type === 'cats'){
           petsBuilder(pets);
         } else {
-          const filteredPeeps = characters.filter(x => x.type === dinos);
-          charactersBuilder(filteredPeeps);
+          const filteredPets = pets.filter(x => x.type === dinos);
+          petsBuilder(filteredPets);
         }
       };
 
