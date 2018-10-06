@@ -17,22 +17,20 @@ const setPets = (newArray) => {
     } else if (type ==='dog') {
       const filteredDog = pets.filter(x => x.type === type);
       petsBuilder(filteredDog);
-      console.log('hi');
     } else if (type === 'cat') {
     const filteredCat = pets.filter(x => x.type === type);
     petsBuilder(filteredCat);
-    console.log('helloooo');
     } else if (type === 'dino') {
     const filteredDino = pets.filter(x => x.type === type);
     petsBuilder(filteredDino);
-    console.log('heyyaaa');
     }
 };
 
   const petsBuilder = (petsArray) => {
     let domString = '';
     for (let i = 0; i < petsArray.length; i++) {  
-      domString += `<div class="col-1 pets-card">${petsArray[i].name}</div>`;
+      domString += `<div class = "col- 1 card border-primary mb-3 containter-card">`  
+      domString += `<div class="card-header bg-transparent border-success pets-card">${petsArray[i].name}</div>`;
       domString +=   `<div class="card">`;
       domString +=    `<img class="card-img-top" src="${petsArray[i].imageUrl}">`;
       domString +=    `<div class="card-body">`;
@@ -42,6 +40,7 @@ const setPets = (newArray) => {
       domString +=    `</div>`;
       domString +=  `</div>`;
       domString +=`</div>`;
+      domString += `</div>`;
     };
 
     printToDom(domString,'pets');
