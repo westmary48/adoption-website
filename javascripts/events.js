@@ -13,16 +13,17 @@ const petClick = (e) => {
     for(let i=0; i<petsCards.length; i++){
       petCards[i].addEventListener('click', petClick);
     }
+}
 
-    const sortPets = (e) => {
-        const type = e.target.id;
-        if(type === 'cats'){
-          petsBuilder(pets);
-        } else {
-          const filteredPets = pets.filter(x => x.type === dinos);
-          petsBuilder(filteredPets);
-        }
-      };
+    // const sortPets = (e) => {
+    //     const type = e.target.id;
+    //     if(type === 'cats'){
+    //       petsBuilder(pets);
+    //     } else {
+    //       const filteredPets = pets.filter(x => x.type === dinos);
+    //       petsBuilder(filteredPets);
+    //     }
+    //   };
 
   const sortEvents = () => {
   const dogsButton = document.getElementById('dogs');
@@ -32,4 +33,6 @@ const petClick = (e) => {
   catsButton.addEventListener('click', sortPets);
   dinosButton.addEventListener('click', sortPets);
   };
+
+  export{sortEvents}
   
