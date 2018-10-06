@@ -1,3 +1,14 @@
 body {
     background-color: blanchedalmond;
 }
+
+.card-img-top {
+    height: 280px;
+    width: 280px;
+    object-fit:cover;
+    object-position: 0 0;
+  }
+
+  .pets-card{
+    display: inline-block;
+  }
