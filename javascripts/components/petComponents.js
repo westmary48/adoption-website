@@ -15,15 +15,15 @@ const setPets = (newArray) => {
     if(type === 'all'){
       petsBuilder(pets);
     } else if (type ==='dog') {
-      const filteredDog = pets.filter(x => x.type === dog);
+      const filteredDog = pets.filter(x => x.type === type);
       petsBuilder(filteredDog);
       console.log('hi');
     } else if (type === 'cat') {
-    const filteredCat = pets.filter(x => x.type === cat);
+    const filteredCat = pets.filter(x => x.type === type);
     petsBuilder(filteredCat);
     console.log('helloooo');
     } else if (type === 'dino') {
-    const filteredDino = pets.filter(x => x.type === dino);
+    const filteredDino = pets.filter(x => x.type === type);
     petsBuilder(filteredDino);
     console.log('heyyaaa');
     }
