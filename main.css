@@ -1,16 +1,22 @@
 body {
-    background-color: palegreen;
+    background-color: floralwhite;
 }
 
 .card-img-top {
     display: flex;
     justify-content: center;
     height: 280px;
-    width: 280px;
-    object-fit:cover;
+    width: 100%;
     object-position: 0 0;
   }
 
+  .pets-card{
+    display: inline-block;
+  }
+
+.container {
+    width: 100%;
+}
 
     
 
