@@ -1,16 +1,16 @@
 body {
-    background-color: blanchedalmond;
+    background-color: palegreen;
 }
 
 .card-img-top {
+    display: flex;
+    justify-content: center;
     height: 280px;
     width: 280px;
     object-fit:cover;
     object-position: 0 0;
-    justify-content: center;
   }
 
-  .pets-card{
-    display: inline-block;
-  }
+
+    
 
