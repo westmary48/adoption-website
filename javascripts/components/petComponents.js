@@ -26,6 +26,18 @@ const setPets = (newArray) => {
     }
 };
 
+const coloredPets = (e) => {
+    for (let i = 0; i < pets.length; i++) {  
+    if(pets[i].type === 'cat') {
+    document.getElementById(`footer${[i]}`).style.backgroundColor = '#2BBBAD';
+    } else if (pets[i].type === 'dog') {
+    document.getElementById(`footer${[i]}`).style.backgroundColor = '#ffbb33';
+    } else if (pets[i].type === 'dino') {
+    document.getElementById(`footer${[i]}`).style.backgroundColor = '#4285F4';
+    }
+}
+}
+
   const petsBuilder = (petsArray) => {
     let domString = '';
     for (let i = 0; i < petsArray.length; i++) {  
@@ -39,13 +51,15 @@ const setPets = (newArray) => {
       domString +=    `</div>`;
       domString +=  `</div>`;
       domString += `<div class = card-footer d-flex flex-column>`
-      domString +=  `<h6 class= "card-type d-flex justify-content-center p-3 mb-2 bg-primary text-black">${petsArray[i].type}</h6>`;
+      domString +=  `<h6 id ="footer${[i]}" class= "card-type d-flex justify-content-center p-3 mb-2 text-black">${petsArray[i].type}</h6>`;
       domString +=`</div>`;
       domString += `</div>`;
       domString += `</div>`;
     };
 
     printToDom(domString,'pets');
+    coloredPets();
+
   };
 
   export {petsBuilder, getPetz, setPets, sortPets};
